@@ -4,6 +4,9 @@ use App\Core\Router;
 
 $router = new Router();
 
+// Register Routes
+$router->add("GET", "/login", "AuthController", "login");
+$router->add("GET", "/register", "AuthController", "register");
 
 $router->run();
 
