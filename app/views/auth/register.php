@@ -9,9 +9,9 @@
 </head>
 
 <body class="bg-cover bg-center min-h-screen flex items-center justify-center" style="background-image: url('/assets/images/auth-background.jpg')">
-    <div class="flex items-center gap-8 bg-white/30 backdrop-blur-md  py-4 px-12 rounded-2xl shadow-lg">
+    <div class="flex items-center gap-8 bg-white    /30 backdrop-blur-md  py-4 px-12 rounded-2xl shadow-lg">
         <!-- IMAGE START -->
-        <div class="w-[440px]">
+        <div class="w-[400px]">
             <img src="/assets/images/register.png" class="w-full h-full object-cover" alt="register-image">
         </div>
         <!-- IMAGE END -->
