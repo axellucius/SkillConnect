@@ -8,6 +8,7 @@ $router = new Router();
 $router->add("GET", "/login", "AuthController", "login");
 $router->add("GET", "/register", "AuthController", "register");
 $router->add("GET", "/profile", "AuthController", "profile");
+$router->add("GET", "/skills", "AuthController", "skills");
 
 $router->run();
 

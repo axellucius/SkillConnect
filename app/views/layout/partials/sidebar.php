@@ -8,11 +8,11 @@
     <link rel="stylesheet" href="/css/output.css">
 </head>
 <body>
-    <!-- Sidebar SkillConnect -->
-<aside class="flex flex-col h-screen w-56 px-4 py-6 bg-[#0f1123]">
+  <!-- Sidebar SkillConnect -->
+  <aside class="flex flex-col h-screen w-56 px-4 py-6 bg-[#0f1123]">
 
   <!-- Logo -->
-  <h1 class="text-white text-lg font-semibold tracking-tight mb-8">SkillConnect</h1>
+  <h1 class="text-white text-2xl font-bold tracking-tight mb-8">SkillConnect</h1>
 
   <!-- Menu -->
   <div class="mb-6">
@@ -43,7 +43,7 @@
     </nav>
   </div>
 
-  <!-- General -->
+  <!-- GENERAL START -->
   <div class="mb-4">
     <p class="text-[#4a5180] text-[11px] font-semibold uppercase tracking-widest mb-2">General</p>
     <nav>
@@ -53,17 +53,20 @@
       </a>
     </nav>
   </div>
+  <!-- GENERAL END -->
 
-  <!-- User Profile -->
+  <!-- USER PROFILE START -->
   <div class="mt-auto pt-4 border-t border-[#1e2340] flex items-center gap-2.5">
     <div class="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-500 to-blue-500 flex items-center justify-center text-white text-xs font-semibold shrink-0">
       VG
     </div>
-    <div>
+
+    <div class="">
       <p class="text-slate-200 text-sm font-medium leading-tight">Vincent Genesius</p>
-      <p class="text-[#4a5180] text-[11px] leading-tight">111K 3</p>
+      <p class="text-[#4a5180] text-[12px] leading-tight">11 TKJ 3</p>
     </div>
   </div>
+  <!-- USER PROFILE END -->
 
 </aside>
 </body>

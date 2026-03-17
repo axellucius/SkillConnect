@@ -15,8 +15,14 @@ class AuthController
 
     public function profile()
     {
-        $data = 'data testing';
         require_once '../app/views/auth/profile.php';
     }
+
+    public function skills()
+    {
+        require_once '../app/views/skills/skill.php';
+    }
+
+
 }
 ?>
