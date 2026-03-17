@@ -10,14 +10,14 @@
 
 <body>
   <!-- SIDEBAR START -->
-  <aside class="flex flex-col h-screen w-56 px-4 py-6 bg-gradient-to-b from-[#292D4A] to-[#000000]">
+  <aside class="flex flex-col h-screen w-58 px-4 py-6 bg-gradient-to-b from-[#292D4A] to-[#000000]">
 
     <!-- LOGO -->
     <h1 class="text-white text-2xl font-bold tracking-tight mb-8">SkillConnect</h1>
 
     <!-- MENU START -->
     <div class="mb-6">
-      <p class="text-[#4a5180] text-[11px] font-semibold uppercase tracking-widest mb-2">Menu</p>
+      <p class="text-white text-[11px] font-semibold uppercase tracking-widest mb-2">Menu</p>
       <nav class="flex flex-col gap-1">
 
         <!-- ACTIVE -->
@@ -55,7 +55,7 @@
 
     <!-- GENERAL START -->
     <div class="mb-4">
-      <p class="text-[#4a5180] text-[11px] font-semibold uppercase tracking-widest mb-2">General</p>
+      <p class="text-white text-[11px] font-semibold uppercase tracking-widest mb-2">General</p>
       <nav>
         <a href="#" class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-gray-500 text-sm font-medium hover:bg-[#1a1f3a] hover:text-[#a0a8d0] transition-colors">
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor">
@@ -68,7 +68,7 @@
     <!-- GENERAL END -->
 
     <!-- USER PROFILE START -->
-    <div class="mt-auto pt-4 border-t border-[#1e2340] flex items-center gap-2.5 hover:bg-">
+    <a href="#" class="mt-auto p-2 rounded-lg flex items-center gap-2.5 hover:bg-[#1a1f3a] hover:text-[#a0a8d0] transition-colors">
       <div class="w-9 h-9 flex items-center justify-center">
         <img src="/assets/images/photo-profile.jpg" alt="Photo Profile" class="rounded-full">
       </div>
@@ -77,7 +77,7 @@
         <p class="text-white text-sm font-medium leading-tight">Vincent Genesius</p>
         <p class="text-[#4a5180] text-[12px] leading-tight">11 TKJ 3</p>
       </div>
-    </div>
+    </a>
     <!-- USER PROFILE END -->
     
   </aside>

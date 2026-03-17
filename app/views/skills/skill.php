@@ -3,9 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SkillConnect</title>
 </head>
 <body>
     <?php require_once '../app/views/layout/partials/sidebar.php'; ?>
+
+    
 </body>
 </html>
