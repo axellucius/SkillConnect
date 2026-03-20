@@ -10,6 +10,7 @@ $router->add("GET", "/register", "AuthController", "register");
 $router->add("GET", "/profile", "AuthController", "profile");
 $router->add("GET", "/skills", "AuthController", "skills");
 
+
 $router->run();
 
 ?>      

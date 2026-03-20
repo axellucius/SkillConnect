@@ -22,7 +22,6 @@ class AuthController
     {
         require_once '../app/views/skills/skill.php';
     }
-
-
+    
 }
 ?>
