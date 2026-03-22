@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,17 +10,15 @@
 
 <body class="font-sans flex min-h-screen" style="background:#f0f2f8; margin:0; padding:0;">
 
-    <!-- ===== SIDEBAR ===== -->
+    <!-- SIDEBAR -->
     <?php require_once '../app/views/layout/partials/sidebar.php'; ?>
 
-    <!-- ===== MAIN CONTENT ===== -->
+    <!-- MAIN CONTENT START -->
     <main style="flex:1; min-width:0;">
 
-        <!-- Hero Banner -->
+        <!-- BANNER START -->
         <div style="width:100%; height:170px; overflow:hidden; background:#0d0f1a;">
-            <img src="/assets/images/Banner.png"
-                 style="width:100%; height:100%; object-fit:cover; display:block;"
-                 onerror="this.style.display='none';" />
+            <img src="/assets/images/Banner.png" style="width:100%; height:100%; object-fit:cover; display:block;" onerror="this.style.display='none';" />
         </div>
 
         <!-- Content area -->
@@ -32,9 +31,7 @@
                 <div style="background:#fff; border-radius:16px; box-shadow:0 4px 16px rgba(0,0,0,0.08); overflow:hidden; display:flex; flex-direction:column; width:300px; flex-shrink:0; align-self:flex-start;">
                     <div style="display:flex; justify-content:center; padding:20px 16px 8px;">
                         <div style="width:80px; height:80px; border-radius:50%; overflow:hidden; border:4px solid #fff; box-shadow:0 2px 8px rgba(0,0,0,0.12); flex-shrink:0;">
-                            <img src="https://ui-avatars.com/api/?name=Lucas+Alexandro&background=6c63ff&color=fff&size=80&bold=true"
-                                 alt="Lucas Alexandro"
-                                 style="width:100%; height:100%; object-fit:cover; display:block;" />
+                            <img src="https://ui-avatars.com/api/?name=Lucas+Alexandro&background=6c63ff&color=fff&size=80&bold=true" alt="Lucas Alexandro" style="width:100%; height:100%; object-fit:cover; display:block;" />
                         </div>
                     </div>
                     <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 20px 20px;">
