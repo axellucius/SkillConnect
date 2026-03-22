@@ -12,5 +12,11 @@ class AuthController
     {
         require_once '../app/views/auth/register.php';
     }
+
+    public function profile()
+    {
+        $data = 'data testing';
+        require_once '../app/views/auth/profile.php';
+    }
 }
 ?>
