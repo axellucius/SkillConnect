@@ -9,7 +9,7 @@
 
 <body>
     <!-- SIDEBAR START -->
-    <aside class="flex flex-col h-screen w-58 px-4 py-6 bg-linear-to-b from-[#292D4A] to-[#000000]">
+    <aside class="flex flex-col fixed h-screen w-58 px-4 py-6 bg-linear-to-b from-[#292D4A] to-[#000000]">
 
         <!-- LOGO -->
         <h1 class="text-white text-2xl font-bold tracking-tight mb-8">SkillConnect</h1>

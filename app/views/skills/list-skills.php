@@ -10,7 +10,7 @@
     <?php require_once '../app/views/layout/partials/sidebar.php'; ?>
 
     <!-- MAIN CONTENT START -->
-    <main class="flex-1">
+    <main class="flex-1 pl-58">
 
         <!-- HEADER START -->
         <header class="flex items-center bg-white shadow-md gap-4 px-4 py-4">
