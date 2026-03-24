@@ -91,7 +91,7 @@
                             <div class="py-1 px-2 rounded-sm bg-[#E8EFF7] border ">Web Development</div>
                             <div class="py-1 px-2 rounded-sm bg-[#E8EFF7] border ">Basketball</div>
                             <div class="py-1 px-2 rounded-sm bg-[#E8EFF7] border ">Android Development</div>
-                            <div class="py-1 px-2 rounded-sm bg-[#E8EFF7] border ">Cyber Security</div>
+                            <div class="py-1 px-2 rounded-sm bg-[#E8EFF7] border ">Cyber Secuity</div>
                         </div>
                     </div>
 
