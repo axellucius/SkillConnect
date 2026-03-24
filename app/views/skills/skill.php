@@ -9,7 +9,7 @@
     <?php require_once '../app/views/layout/partials/sidebar.php'; ?>
 
     <!-- SKILLS CONTENT START -->
-    <main class="flex-1">
+    <main class="flex-1 pl-58 pb-10">
 
         <!-- HEADER START -->
         <header class="flex items-center gap-3 bg-white shadow-md px-6 py-4">
