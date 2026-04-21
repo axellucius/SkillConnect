@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="/css/output.css">
 </head>
 
-<body class="bg-cover bg-center min-h-screen flex items-center justify-between mr-5 ml-18" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/assets/images/auth-bg.jpg')">
+<body class="bg-cover bg-center min-h-screen flex items-center justify-between mx-24" style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url('/assets/images/auth-bg.jpg')">
     <!-- LEFT START -->
-    <div class="flex flex-col gap-96">
+    <div class="flex flex-col justify-between py-16 h-screen">
         <h1 class="text-white text-3xl font-bold">SkillConnect</h1>
         <div class="text-white flex flex-col gap-4 ">
             <h1 class="text-[40px] leading-11 font-semibold">Learn Together. Build Faster. <br> Connect Anywhere.</h1>
@@ -20,7 +20,7 @@
     <!-- LEFT END -->
 
     <!-- MAIN START -->
-    <main class="flex flex-col justify-center gap-7 px-20 w-136 h-160 rounded-2xl bg-white">
+    <main class="flex flex-col justify-center gap-7 px-16 w-132 h-160 rounded-2xl bg-white">
         <div class="flex flex-col">
             <h1 class="font-bold text-4xl pb-2">Create Your Account!</h1>
             <p class="text-md text-gray-500">START YOUR SKILL JOURNEY</p> 
