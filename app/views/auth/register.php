@@ -68,11 +68,16 @@
                 </svg>
             </div>
 
+            <div class="flex items-center">
+                <input id="remember_me" name="remember" type="checkbox" class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
+                <label for="remember_me" class="ml-2 block text-sm text-gray-500">I agree with <span class="font-bold">Terms</span> & <span class="font-bold">Conditions</span></label>
+            </div>
+
             <button type="submit"
-                class="w-full border rounded-full py-3 mt-5 font-semibold text-[16px] bg-black text-white transition-transform duration-300 hover:-translate-y-1">Create
+                class="w-full border rounded-full py-3 mt-5 font-semibold text-[16px] bg-black text-white transition-all duration-300 ease-in-out hover:bg-blue-950 hover:-translate-y-1">Create
                 account</button>
 
-            <p class=" flex justify-center">Already have an account? <span class="text-white">.</span><a href="/login" class="font-bold hover:underline">Login</a></p>
+            <p class=" flex justify-center">Already have an account? <span class="text-white">.</span><a href="/login" class="font-bold hover:text-blue-900 transition-colors duration-100">Login</a></p>
         </form>
     </main>
     <!-- MAIN END -->
