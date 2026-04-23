@@ -9,19 +9,13 @@
 </head>
 
 <body class="">
-    <!-- HEADER START -->
     <?php require_once '../app/views/layout/partials/sidebar.php'?>
-    <!-- HEADER END -->
 
-    <!-- MAIN START -->
     <main>
         <?php require_once $content?>
     </main>
-    <!-- MAIN END -->
 
-    <!-- FOOTER START -->
-    
-    <!-- FOOTER START -->
+    <?php require_once '../app/views/layout/partials/footer.php'?>
 </body>
 
 </html>
