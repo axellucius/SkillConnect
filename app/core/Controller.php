@@ -3,16 +3,10 @@ namespace App\Core;
 
 class Controller
 {
-    public function view(string $view, array $data = [])
+    public function view($view, $data = [])
     {
         extract($data);
-        $view = str_replace(
-            '.', 
-            '/', 
-            $view
-        );
-
-        $content = '../app/views/{$view}.php';
+        $content = "../app/views/" . $view . ".php";
 
         require_once '../app/views/layout/app.php';
     }

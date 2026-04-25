@@ -1,12 +1,18 @@
 <?php
 namespace App\Controllers;
 
-class HomeController
+require_once '../app/core/Controller.php';
+
+use App\Core\Controller;
+
+class HomeController extends Controller
 {
     public function index()
     {
-        require_once '../app/views/home/index.php';
+        $data = [
+            'title' => 'Home',
+            'active_page' => 'home'
+        ];
+        $this->view('home/index', $data);
     }
 }
-
-?>
