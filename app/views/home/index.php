@@ -71,41 +71,40 @@
         </div>
 
         <div class="group border border-gray-500 rounded-sm p-4 hover:translate-y-2 hover:bg-[#ef6c32] transition-all duration-500 ease-in-out cursor-pointer">
-            <img src="/assets/images/ui-ux.png" class="w-10 pb-2" alt="UI/UX Design">
+            <img src="/assets/images/digital-marketing.png" class="w-10 pb-2" alt="UI/UX Design">
             <h1 class="font-bold text-2xl leading-7">Digital <br> Marketing</h1>
             <p class="font-light text-sm leading-5 pt-3">Promoting products or services through online platforms and strategies. Helps increase visibility and reach a wider audience.</p>
         </div>
 
         <div class="group border border-gray-500 rounded-sm p-4 hover:translate-y-2 hover:bg-[#ef6c32] transition-all duration-500 ease-in-out cursor-pointer">
-            <img src="/assets/images/ui-ux.png" class="w-10 pb-2" alt="UI/UX Design">
+            <img src="/assets/images/project-management.png" class="w-10 pb-2" alt="UI/UX Design">
             <h1 class="font-bold text-2xl leading-7">Project <br> Management</h1>
             <p class="font-light text-sm leading-5 pt-3">Planning, organizing, and managing tasks to achieve project goals. Ensures work is completed efficiently and on time.</p>
         </div>
 
         <div class="group border border-gray-500 rounded-sm p-4 hover:translate-y-2 hover:bg-[#ef6c32] transition-all duration-500 ease-in-out cursor-pointer">
-            <img src="/assets/images/ui-ux.png" class="w-10 pb-2" alt="UI/UX Design">
+            <img src="/assets/images/video-editing.png" class="w-10 pb-2" alt="UI/UX Design">
             <h1 class="font-bold text-2xl leading-7">Video <br> Editing</h1>
             <p class="font-light text-sm leading-5 pt-3">Editing and arranging video content to create engaging visuals. Involves cutting, effects, and improving overall quality.</p>
         </div>
 
         <div class="group border border-gray-500 rounded-sm p-4 hover:translate-y-2 hover:bg-[#ef6c32] transition-all duration-500 ease-in-out cursor-pointer">
-            <img src="/assets/images/ui-ux.png" class="w-10 pb-2" alt="UI/UX Design">
+            <img src="/assets/images/motion-design.png" class="w-10 pb-2" alt="UI/UX Design">
             <h1 class="font-bold text-2xl leading-7">Motion <br> Design</h1>
             <p class="font-light text-sm leading-5 pt-3">Creating animated graphics and visual effects for digital content. Enhances storytelling through movement and transitions.</p>
         </div>
 
         <div class="group border border-gray-500 rounded-sm p-4 hover:translate-y-2 hover:bg-[#ef6c32] transition-all duration-500 ease-in-out cursor-pointer">
-            <img src="/assets/images/ui-ux.png" class="w-10 pb-2" alt="UI/UX Design">
+            <img src="/assets/images/graphic-design.png" class="w-10 pb-2" alt="UI/UX Design">
             <h1 class="font-bold text-2xl leading-7">Graphic <br> Design</h1>
             <p class="font-light text-sm leading-5 pt-3">Creating visual content such as posters, logos, and branding materials. Focuses on layout, color, and visual communication.</p>
         </div>
 
         <div class="group border border-gray-500 rounded-sm p-4 hover:translate-y-2 hover:bg-[#ef6c32] transition-all duration-500 ease-in-out cursor-pointer">
-            <img src="/assets/images/ui-ux.png" class="w-10 pb-2" alt="UI/UX Design">
+            <img src="/assets/images/public-speaking.png" class="w-10 pb-2" alt="UI/UX Design">
             <h1 class="font-bold text-2xl leading-7">Public <br> Speaking</h1>
             <p class="font-light text-sm leading-5 pt-3">Delivering ideas clearly and confidently in front of an audience. Helps improve communication and presentation skills.</p>
         </div>
-
     </article>
 </section>
 <!-- POPULAR SKILLS END -->
