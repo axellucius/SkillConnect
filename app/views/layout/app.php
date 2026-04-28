@@ -23,6 +23,7 @@
         
     </main>
     <!-- MAIN END -->
-</body>
 
+    <script src="/js/script.js"></script>
+</body>
 </html>
