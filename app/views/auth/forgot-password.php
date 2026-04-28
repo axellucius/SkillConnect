@@ -24,23 +24,31 @@
     <!-- MAIN START -->
     <main class="flex flex-col justify-center gap-7 px-16 w-132 h-160 rounded-2xl bg-white">
         <div class="flex flex-col">
-            <h1 class="font-bold text-4xl pb-2">Access Your Account!</h1>
-            <p class="text-md text-gray-500">WELCOME BACK CONTINUE YOUR JOURNEY</p>
+            <h1 class="font-bold text-4xl pb-2">Reset Password!</h1>
+            <p class="text-md text-gray-500">ENTER YOUR EMAIL AND NEW PASSWORD</p>
         </div>
 
-        <form action="/login" method="POST" class="flex flex-col gap-4">
+        <form action="/forgot-password" method="POST" class="flex flex-col gap-4">
 
-            <!-- Tampilkan error jika login gagal -->
+            <!-- Tampilkan error -->
             <?php if (isset($error)): ?>
                 <div class="text-red-500 text-sm text-center bg-red-50 border border-red-200 rounded-lg p-2">
                     <?= htmlspecialchars($error) ?>
                 </div>
             <?php endif; ?>
 
+            <!-- Tampilkan success -->
+            <?php if (isset($success)): ?>
+                <div class="text-green-500 text-sm text-center bg-green-50 border border-green-200 rounded-lg p-2">
+                    <?= htmlspecialchars($success) ?>
+                </div>
+            <?php endif; ?>
+
+            <!-- Email -->
             <div class="relative">
                 <input type="email" name="email" placeholder="Email"
-                    value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
-                    class="w-full text-sm border p-3 pr-13 rounded-lg">
+                       value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
+                       class="w-full text-sm border p-3 pr-13 rounded-lg">
                 <svg class="w-6 h-6 absolute right-3 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -48,9 +56,10 @@
                 </svg>
             </div>
 
+            <!-- New Password -->
             <div class="relative">
-                <input type="password" name="password" placeholder="Password"
-                    class="w-full text-sm border p-3 pr-13 rounded-lg">
+                <input type="password" name="new_password" placeholder="New Password"
+                       class="w-full text-sm border p-3 pr-13 rounded-lg">
                 <svg class="w-6 h-6 absolute right-3 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -59,26 +68,25 @@
                 </svg>
             </div>
 
-            <div class="flex items-center justify-between">
-                <div class="flex items-center">
-                    <input id="remember_me" name="remember" type="checkbox"
-                        class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                    <label for="remember_me" class="ml-2 block text-sm text-gray-500">Remember me</label>
-                </div>
-
-                <div class="text-sm">
-                    <a href="/forgot-password" class="font-medium transition-all duration-100 hover:text-blue-900">Forgot your
-                        password?</a>
-                </div>
+            <!-- Confirm New Password -->
+            <div class="relative">
+                <input type="password" name="confirm_password" placeholder="Confirm New Password"
+                       class="w-full text-sm border p-3 pr-13 rounded-lg">
+                <svg class="w-6 h-6 absolute right-3 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg"
+                    fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
             </div>
 
             <button type="submit"
                 class="w-full border rounded-full py-3 mt-5 font-semibold text-[16px] bg-black text-white transition-all duration-300 ease-in-out hover:bg-blue-950 hover:-translate-y-1">
-                Login
+                Reset Password
             </button>
 
-            <p class="flex justify-center">Don't have an account? <span class="text-white">.</span>
-                <a href="/register" class="font-bold hover:text-blue-900 transition-colors duration-100">Register</a>
+            <p class="flex justify-center">Remember your password?
+                <a href="/login" class="font-bold ml-1 hover:text-blue-900 transition-colors duration-100">Login</a>
             </p>
 
         </form>
