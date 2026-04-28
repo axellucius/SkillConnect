@@ -58,7 +58,7 @@
 <section class="flex flex-col px-12 py-10 gap-6 bg-linear-to-b from-[#292D4A] to-[#000000]">
     <div class="flex justify-between items-center">
         <div class="text-white">
-            <p class="font-extralight text-xl">TOP SKILLS</p>
+            <p class="font-extralight text-xl tracking-widest">TOP SKILLS</p>
             <h1 class="font-bold text-3xl">Explore Popular Skills</h1>
         </div>
 
@@ -136,10 +136,10 @@
 <!-- POPULAR SKILLS END -->
 
 <!-- SUPPORT FAQ START -->
-<section class="flex justify-between mx-12 mt-12 h-93">
+<section class="flex justify-between mx-12 mt-15 h-93">
     <article class="flex flex-col gap-4">
         <div>
-            <p class="font-light text-xl text-[#333333]">SUPPORT</p>
+            <p class="font-light text-xl text-[#333333] tracking-widest">SUPPORT</p>
             <h1 class="font-bold text-3xl text-[#333333]">Frequently Asked</h1>
             <h1 class="font-bold text-3xl text-[#ef6c32]">Questions</h1>
         </div>
@@ -216,17 +216,43 @@
 <!-- SUPPORT FAQ END -->
 
 <!-- TESTIMONIALS START -->
-<section class="mx-12">
-    <article>
-        <p>TESTIMONIALS</p>
-        <h1>What Students Say</h1>
-        <p>Hear what students say about their experience using SkillConnect. Discover how they learn, connect, and grow together.</p>
+<section class="ml-12 mb-10 flex items-center">
+    <article class="border border-[#333333] rounded-lg py-12 pl-8 pr-30">
+        <p class="text-[#333333] font-light text-xl tracking-widest">TESTIMONIALS</p>
+        <h1 class="text-4xl font-bold text-[#333333] tracking-tight">What Students Say</h1>
+        <p class="text-[#333333] font-light mt-3">Hear what students say about their experience <br> using SkillConnect. Discover how they learn, <br> connect, and grow together.</p>
     </article>
 
-    <article>
-        <div>
+    <div class="flex gap-3 -ml-20 relative">
+        <article class="w-80 bg-linear-to-b from-[#292D4A] to-[#000000] text-white p-6 rounded-lg shadow-2xl shrink-0 transform hover:-translate-y-2 transition-transform duration-300">
+            <svg class="w-6 h-6 text-white mb-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017C11.4647 12 11.017 11.5523 11.017 11V9C11.017 6.79086 12.8079 5 15.017 5H19.017C21.2261 5 23.017 6.79086 23.017 9V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H2.017C1.46472 8 1.017 8.44772 1.017 9V11C1.017 11.5523 0.569282 12 0.017 12H-0.983C-1.53528 12 -2.017 11.5523 -2.017 11V9C-2.017 6.79086 -0.226142 5 1.983 5H6.017C8.22614 5 10.017 6.79086 10.017 9V15C10.017 18.3137 7.33014 21 4.017 21H1.017Z" />
+            </svg>
+            
+            <p class="text-sm font-light leading-relaxed mb-2 text-gray-300">SkillConnect helped me find friends with the same interests and work on projects together. It made learning more fun and easier.</p>
 
-        </div>
-    </article>
+            <div class="border-t border-gray-700 pt-5 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full overflow-hidden">
+                    <img src="/assets/images/photo-profile-2.jpg" alt="User">
+                </div>
+                <p class="font-semibold text-sm">Claryn Grazelyn</p>
+            </div>
+        </article>
+
+        <article class="w-80 bg-linear-to-b from-[#292D4A] to-[#000000] text-white p-6 rounded-lg shadow-2xl shrink-0 transform hover:-translate-y-2 transition-transform duration-300">
+            <svg class="w-6 h-6 text-white mb-2" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017C11.4647 12 11.017 11.5523 11.017 11V9C11.017 6.79086 12.8079 5 15.017 5H19.017C21.2261 5 23.017 6.79086 23.017 9V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H2.017C1.46472 8 1.017 8.44772 1.017 9V11C1.017 11.5523 0.569282 12 0.017 12H-0.983C-1.53528 12 -2.017 11.5523 -2.017 11V9C-2.017 6.79086 -0.226142 5 1.983 5H6.017C8.22614 5 10.017 6.79086 10.017 9V15C10.017 18.3137 7.33014 21 4.017 21H1.017Z" />
+            </svg>
+            
+            <p class="text-sm font-light leading-relaxed mb-2 text-gray-300">SkillConnect helped me find friends with the same interests and work on projects together. It made learning more fun and easier.</p>
+
+            <div class="border-t border-gray-700 pt-5 flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full overflow-hidden">
+                    <img src="/assets/images/photo-profile-2.jpg" alt="User">
+                </div>
+                <p class="font-semibold text-sm">Claryn Grazelyn</p>
+            </div>
+        </article>
+    </div>
 </section>
 <!-- TESTIMONIALS END -->
