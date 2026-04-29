@@ -1,9 +1,5 @@
 <!-- SLIDESHOW START -->
-<section>
-    <div>
-        
-    </div>
-</section>
+
 <!-- SLIDESHOW END -->
 
 <!-- MOTTO START -->
@@ -136,7 +132,7 @@
 <!-- POPULAR SKILLS END -->
 
 <!-- SUPPORT FAQ START -->
-<section class="flex justify-between mx-12 mt-15 h-93">
+<section class="flex justify-between mx-12 mt-16 h-93">
     <article class="flex flex-col gap-4">
         <div>
             <p class="font-light text-xl text-[#333333] tracking-widest">SUPPORT</p>
@@ -147,7 +143,9 @@
         <div class="flex flex-col w-106 p-6 rounded-lg bg-linear-to-b from-[#292D4A] to-[#000000] text-white">
             <h1 class="font-semibold text-xl">Still Have A Questions?</h1>
             <p class="font-light text-sm mb-4">We're Here To Help You Find The Answers You Need.</p>
-            <a href="#" class="flex text-white text-md font-semibold w-36 justify-center py-2 rounded-lg bg-[#2A2F5A] hover:-translate-y-1 hover:bg-[#454b85] transition-all">Send Email</a>
+            <a href="#"
+                class="flex text-white text-md font-semibold w-36 justify-center py-2 rounded-lg bg-[#2A2F5A] hover:-translate-y-1 hover:bg-[#454b85] transition-all">Send
+                Email</a>
         </div>
     </article>
 
@@ -163,7 +161,8 @@
                 </span>
             </button>
             <div id="ans-1" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-gray-600">
-                <p class="pt-4">A platform where students can share their skills, learn from others, and collaborate on projects together.</p>
+                <p class="pt-4">A platform where students can share their skills, learn from others, and collaborate on
+                    projects together.</p>
             </div>
         </div>
 
@@ -178,7 +177,8 @@
                 </span>
             </button>
             <div id="ans-2" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-gray-600">
-                <p class="pt-4">You can browse the projects gallery and click the "Join" button on any project that interests you.</p>
+                <p class="pt-4">You can browse the projects gallery and click the "Join" button on any project that
+                    interests you.</p>
             </div>
         </div>
 
@@ -193,7 +193,8 @@
                 </span>
             </button>
             <div id="ans-3" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-gray-600">
-                <p class="pt-4">Yes! Go to your profile settings and you can list any skills you want to share with others.</p>
+                <p class="pt-4">Yes! Go to your profile settings and you can list any skills you want to share with
+                    others.</p>
             </div>
         </div>
 
@@ -208,7 +209,8 @@
                 </span>
             </button>
             <div id="ans-4" class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out text-gray-600">
-                <p class="pt-4">Absolutely! SkillConnect is a community-driven platform for students to grow together for free.</p>
+                <p class="pt-4">Absolutely! SkillConnect is a community-driven platform for students to grow together
+                    for free.</p>
             </div>
         </div>
     </article>
@@ -220,16 +222,20 @@
     <article class="border border-[#333333] rounded-lg py-12 pl-8 pr-30">
         <p class="text-[#333333] font-light text-xl tracking-widest">TESTIMONIALS</p>
         <h1 class="text-4xl font-bold text-[#333333] tracking-tight">What Students Say</h1>
-        <p class="text-[#333333] font-light mt-3">Hear what students say about their experience <br> using SkillConnect. Discover how they learn, <br> connect, and grow together.</p>
+        <p class="text-[#333333] font-light mt-3">Hear what students say about their experience <br> using SkillConnect.
+            Discover how they learn, <br> connect, and grow together.</p>
     </article>
 
     <div class="flex gap-3 -ml-20 relative">
-        <article class="w-80 bg-linear-to-b from-[#292D4A] to-[#000000] text-white p-6 rounded-lg shadow-2xl shrink-0 transform hover:-translate-y-2 transition-transform duration-300">
+        <article
+            class="w-80 bg-linear-to-b from-[#292D4A] to-[#000000] text-white p-6 rounded-lg shadow-2xl shrink-0 transform hover:-translate-y-2 transition-transform duration-300">
             <svg class="w-6 h-6 text-white mb-2" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017C11.4647 12 11.017 11.5523 11.017 11V9C11.017 6.79086 12.8079 5 15.017 5H19.017C21.2261 5 23.017 6.79086 23.017 9V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H2.017C1.46472 8 1.017 8.44772 1.017 9V11C1.017 11.5523 0.569282 12 0.017 12H-0.983C-1.53528 12 -2.017 11.5523 -2.017 11V9C-2.017 6.79086 -0.226142 5 1.983 5H6.017C8.22614 5 10.017 6.79086 10.017 9V15C10.017 18.3137 7.33014 21 4.017 21H1.017Z" />
+                <path
+                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017C11.4647 12 11.017 11.5523 11.017 11V9C11.017 6.79086 12.8079 5 15.017 5H19.017C21.2261 5 23.017 6.79086 23.017 9V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H2.017C1.46472 8 1.017 8.44772 1.017 9V11C1.017 11.5523 0.569282 12 0.017 12H-0.983C-1.53528 12 -2.017 11.5523 -2.017 11V9C-2.017 6.79086 -0.226142 5 1.983 5H6.017C8.22614 5 10.017 6.79086 10.017 9V15C10.017 18.3137 7.33014 21 4.017 21H1.017Z" />
             </svg>
-            
-            <p class="text-sm font-light leading-relaxed mb-2 text-gray-300">SkillConnect helped me find friends with the same interests and work on projects together. It made learning more fun and easier.</p>
+
+            <p class="text-sm font-light leading-relaxed mb-2 text-gray-300">SkillConnect helped me find friends with
+                the same interests and work on projects together. It made learning more fun and easier.</p>
 
             <div class="border-t border-gray-700 pt-5 flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full overflow-hidden">
@@ -239,12 +245,15 @@
             </div>
         </article>
 
-        <article class="w-80 bg-linear-to-b from-[#292D4A] to-[#000000] text-white p-6 rounded-lg shadow-2xl shrink-0 transform hover:-translate-y-2 transition-transform duration-300">
+        <article
+            class="w-80 bg-linear-to-b from-[#292D4A] to-[#000000] text-white p-6 rounded-lg shadow-2xl shrink-0 transform hover:-translate-y-2 transition-transform duration-300">
             <svg class="w-6 h-6 text-white mb-2" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017C11.4647 12 11.017 11.5523 11.017 11V9C11.017 6.79086 12.8079 5 15.017 5H19.017C21.2261 5 23.017 6.79086 23.017 9V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H2.017C1.46472 8 1.017 8.44772 1.017 9V11C1.017 11.5523 0.569282 12 0.017 12H-0.983C-1.53528 12 -2.017 11.5523 -2.017 11V9C-2.017 6.79086 -0.226142 5 1.983 5H6.017C8.22614 5 10.017 6.79086 10.017 9V15C10.017 18.3137 7.33014 21 4.017 21H1.017Z" />
+                <path
+                    d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V11C14.017 11.5523 13.5693 12 13.017 12H12.017C11.4647 12 11.017 11.5523 11.017 11V9C11.017 6.79086 12.8079 5 15.017 5H19.017C21.2261 5 23.017 6.79086 23.017 9V15C23.017 18.3137 20.3307 21 17.017 21H14.017ZM1.017 21L1.017 18C1.017 16.8954 1.91243 16 3.017 16H6.017C6.56928 16 7.017 15.5523 7.017 15V9C7.017 8.44772 6.56928 8 6.017 8H2.017C1.46472 8 1.017 8.44772 1.017 9V11C1.017 11.5523 0.569282 12 0.017 12H-0.983C-1.53528 12 -2.017 11.5523 -2.017 11V9C-2.017 6.79086 -0.226142 5 1.983 5H6.017C8.22614 5 10.017 6.79086 10.017 9V15C10.017 18.3137 7.33014 21 4.017 21H1.017Z" />
             </svg>
-            
-            <p class="text-sm font-light leading-relaxed mb-2 text-gray-300">I was able to improve my skills by collaborating with other students. The platform is simple and really helpful.</p>
+
+            <p class="text-sm font-light leading-relaxed mb-2 text-gray-300">I was able to improve my skills by
+                collaborating with other students. The platform is simple and really helpful.</p>
 
             <div class="border-t border-gray-700 pt-5 flex items-center gap-3">
                 <div class="w-10 h-10 rounded-full overflow-hidden">

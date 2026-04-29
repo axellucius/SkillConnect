@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/output.css">
-    <title><?= $title ?? 'SkillConnect' ?></title>
+    <title><?= $title ?? 'SkillConnect'?></title>
 </head>
 
 <body class="min-h-screen flex">
