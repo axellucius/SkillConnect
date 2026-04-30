@@ -15,7 +15,13 @@
 
     <!-- MAIN START -->
     <main class="ml-58 flex flex-col flex-1 justify-between">
-        <?php require_once $content?>
+        <?php 
+        if (isset($content)) {
+            require_once $content; 
+        } else {
+            echo "Content not found.";
+        }
+    ?>
         
         <!-- FOOTER START -->
         <?php require_once '../app/views/layout/partials/footer.php'?>

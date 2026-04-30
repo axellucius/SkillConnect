@@ -1,5 +1,9 @@
 <!-- SLIDESHOW START -->
-
+<section>
+    <div class="bg-red-500">
+        <img src="/assets/images/slideshow-1.png" alt="">
+    </div>
+</section>
 <!-- SLIDESHOW END -->
 
 <!-- MOTTO START -->
