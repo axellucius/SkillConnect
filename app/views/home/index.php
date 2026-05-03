@@ -1,6 +1,6 @@
 <!-- SLIDESHOW START -->
 <section>
-    <div class="bg-red-500">
+    <div>
         <img src="/assets/images/slideshow-1.png" alt="">
     </div>
 </section>
