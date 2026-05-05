@@ -18,7 +18,9 @@ $router->add("POST", "/forgot-password", "AuthController", "forgotPasswordPost")
 
 // Home Routes
 $router->add("GET", "/", "HomeController", "index");
-$router->add("GET", "/home", "HomeController", "index");
+
+// Projects Routes
+$router->add("GET", "/projects", "ProjectsController", "index");
 
 $router->add("GET", "/profile",     "AuthController", "profile");
 $router->add("GET", "/skills",      "AuthController", "skills");

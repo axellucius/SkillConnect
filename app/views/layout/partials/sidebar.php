@@ -8,7 +8,7 @@
     <div class="mb-6">
         <p class="text-white text-[11px] font-semibold uppercase tracking-widest mb-2">Menu</p>
         <nav class="flex flex-col gap-1">
-            <a href="#"
+            <a href="/"
                 class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-gray-500 text-sm font-medium transition-colors <?= ($active_page == 'home') ? 'bg-[#2a2f5a] text-white' : 'text-gray-500 hover:bg-[#202853] hover:text-[#a0a8d0]' ?>">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
@@ -34,7 +34,7 @@
                 Friends
             </a>
 
-            <a href="#"
+            <a href="/projects"
                 class="flex items-center gap-2.5 px-3 py-2.5 rounded-lg text-gray-500 text-sm font-medium transition-colors <?= ($active_page == 'projects') ? 'bg-[#2a2f5a] text-white' : 'text-gray-500 hover:bg-[#202853] hover:text-[#a0a8d0]' ?>">
                 <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24" fill="currentColor" class="size-6">
