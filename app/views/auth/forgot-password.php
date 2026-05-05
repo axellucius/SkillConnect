@@ -24,37 +24,31 @@
     <!-- MAIN START -->
     <main class="flex flex-col justify-center gap-7 px-16 w-132 h-160 rounded-2xl bg-white">
         <div class="flex flex-col">
-            <h1 class="font-bold text-4xl pb-2">Create Your Account!</h1>
-            <p class="text-md text-gray-500">START YOUR SKILL JOURNEY</p>
+            <h1 class="font-bold text-4xl pb-2">Reset Password!</h1>
+            <p class="text-md text-gray-500">ENTER YOUR EMAIL AND NEW PASSWORD</p>
         </div>
 
-        <form action="/register" method="POST" class="flex flex-col gap-4">
+        <form action="/forgot-password" method="POST" class="flex flex-col gap-4">
 
-            <!-- Tampilkan error jika ada -->
+            <!-- Tampilkan error -->
             <?php if (isset($error)): ?>
                 <div class="text-red-500 text-sm text-center bg-red-50 border border-red-200 rounded-lg p-2">
                     <?= htmlspecialchars($error) ?>
                 </div>
             <?php endif; ?>
 
-            <!-- Name -->
-            <div class="relative">
-                <input type="text" name="name" placeholder="Username"
-                    value="<?= htmlspecialchars($_POST['name'] ?? '') ?>"
-                    class="w-full text-sm border p-3 pr-13 rounded-lg">
-                <svg class="w-7 h-7 absolute right-2.5 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg"
-                    fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M5.121 17.804A9 9 0 0112 15c2.5 0 4.847 1.02 6.879 2.804M15 11a3 3 0 11-6 0 3 3 0 016 0"
-                        class="text-grey-100" />
-                </svg>
-            </div>
+            <!-- Tampilkan success -->
+            <?php if (isset($success)): ?>
+                <div class="text-green-500 text-sm text-center bg-green-50 border border-green-200 rounded-lg p-2">
+                    <?= htmlspecialchars($success) ?>
+                </div>
+            <?php endif; ?>
 
             <!-- Email -->
             <div class="relative">
                 <input type="email" name="email" placeholder="Email"
-                    value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
-                    class="w-full text-sm border p-3 pr-13 rounded-lg">
+                       value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
+                       class="w-full text-sm border p-3 pr-13 rounded-lg">
                 <svg class="w-6 h-6 absolute right-3 top-1/2 -translate-y-1/2" xmlns="http://www.w3.org/2000/svg"
                     fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round"
@@ -62,34 +56,25 @@
                 </svg>
             </div>
 
-            <!-- Password -->
+            <!-- New Password -->
             <div class="relative">
-                <input type="password" name="password" placeholder="Password"
-                    class="w-full text-sm border p-3 pr-13 rounded-lg">
+                <input type="password" name="new_password" placeholder="New Password"
+                       class="w-full text-sm border p-3 pr-13 rounded-lg">
             </div>
 
-            <!-- Confirm Password -->
+            <!-- Confirm New Password -->
             <div class="relative">
-                <input type="password" name="password_confirmation" placeholder="Confirm Password"
-                    class="w-full text-sm border p-3 pr-13 rounded-lg">
-            </div>
-
-            <!-- Terms & Conditions -->
-            <div class="flex items-center">
-                <input id="terms" name="terms" type="checkbox"
-                    class="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded">
-                <label for="terms" class="ml-2 block text-sm text-gray-500">
-                    I agree with <span class="font-bold">Terms</span> & <span class="font-bold">Conditions</span>
-                </label>
+                <input type="password" name="confirm_password" placeholder="Confirm New Password"
+                       class="w-full text-sm border p-3 pr-13 rounded-lg">
             </div>
 
             <button type="submit"
                 class="w-full border rounded-full py-3 mt-5 font-semibold text-[16px] bg-black text-white transition-all duration-300 ease-in-out hover:bg-blue-950 hover:-translate-y-1">
-                Create Account
+                Reset Password
             </button>
 
-            <p class="flex justify-center">Already have an account? <span class="text-white">.</span>
-                <a href="/login" class="font-bold hover:text-blue-900 transition-colors duration-100">Login</a>
+            <p class="flex justify-center">Remember your password?
+                <a href="/login" class="font-bold ml-1 hover:text-blue-900 transition-colors duration-100">Login</a>
             </p>
 
         </form>
