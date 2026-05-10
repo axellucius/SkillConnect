@@ -8,10 +8,16 @@ class ProjectsController extends Controller
 {
     public function index()
     {
+        $projectModel = new Project();
+        
+        $projects = $projectModel->getAllProjects();
+
         $data = [
             'title' => 'Projects',
-            'active_page' => 'projects'
+            'active_page' => 'projects',
+            'projects' => $projects
         ];
+
         $this->view('projects/index', $data);
     }
 
@@ -55,5 +61,15 @@ class ProjectsController extends Controller
         } else {
             echo "Gagal menyimpan project.";
         }
+    }
+
+    public function create()
+    {
+        $data = [
+            'title' => 'Create New Project',
+            'active_page' => 'projects'
+        ];
+    
+        $this->view('projects/create', $data);
     }
 }

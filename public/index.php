@@ -3,6 +3,9 @@ require_once '../app/core/Database.php';
 require_once '../app/core/Router.php';
 require_once '../app/core/Controller.php';
 
+require_once '../app/models/User.php';
+require_once '../app/models/Project.php';
+
 use App\Core\Router;
 
 session_start(); 
@@ -33,6 +36,7 @@ $router->add("GET", "/", "HomeController", "index");
 
 // Projects Routes
 $router->add("GET", "/projects", "ProjectsController", "index");
+$router->add("GET", "/projects/create", "ProjectsController", "create");
 
 $router->add("GET", "/profile",     "AuthController", "profile");
 $router->add("GET", "/skills",      "AuthController", "skills");
