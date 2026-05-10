@@ -60,7 +60,9 @@
             <div class="mt-3">
                 <p class="text-xs text-[#333333] mb-1">Team Member</p>
                 <div class="flex items-center -space-x-2">
-                    <img src="" class="w-7 h-7 rounded-full border-2 border-white object-cover">
+                    <img src="/assets/images/photo-profile-1.jpg" class="w-7 h-7 rounded-full border-2 border-white object-cover">
+                    <img src="/assets/images/photo-profile-2.jpg" class="w-7 h-7 rounded-full border-2 border-white object-cover">
+                    <img src="/assets/images/photo-profile-3.jpg" class="w-7 h-7 rounded-full border-2 border-white object-cover">
                     <div class="w-7 h-7 rounded-full bg-gray-200 border-2 border-white flex items-center justify-center text-xs text-gray-500"></div>
                 </div>
             </div>
