@@ -1,9 +1,21 @@
 <?php
+require_once '../app/core/Database.php';
 require_once '../app/core/Router.php';
 require_once '../app/core/Controller.php';
 
 use App\Core\Router;
+
 session_start(); 
+
+spl_autoload_register(function($class) {
+    if (file_exists('../app/controllers/' . $class . '.php')) {
+        require_once '../app/controllers/' . $class . '.php';
+    } 
+    else if (file_exists('../app/models/' . $class . '.php')) {
+        require_once '../app/models/' . $class . '.php';
+    }
+});
+
 $router = new Router();
 
 // Auth Routes

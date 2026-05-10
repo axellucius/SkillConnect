@@ -1,7 +1,9 @@
 <?php
 namespace App\Controllers;
 
-require_once '../app/models/User.php';
+use App\Core\Controller;
+use App\Core\Database;
+use App\Models\User;
 
 class AuthController
 {
@@ -15,13 +17,13 @@ class AuthController
         $email = $_POST['email'] ?? '';
         $password = $_POST['password'] ?? '';
 
-        $userModel = new \User();
+        $userModel = new User();
         $user = $userModel->findByEmail($email);
 
         if ($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['name'];
-            header('Location: /home');
+            header('Location: /');
             exit;
         }
 
@@ -47,7 +49,7 @@ class AuthController
             return;
         }
 
-        $userModel = new \User();
+        $userModel = new User();
 
         if ($userModel->findByEmail($email)) {
             $error = "Email sudah digunakan!";
@@ -86,7 +88,7 @@ class AuthController
             return;
         }
 
-        $userModel = new \User();
+        $userModel = new User();
         $user = $userModel->findByEmail($email);
 
         if (!$user) {

@@ -1,14 +1,10 @@
 <?php
-require_once '../app/config/database.php';
+namespace App\Models;
 
-class User
+use App\Core\Database;
+
+class User extends Database
 {
-    private $db;
-
-    public function __construct()
-    {
-        $this->db = Database::connect();
-    }
 
     public function findByEmail($email)
     {
@@ -28,7 +24,6 @@ class User
         return $stmt->execute();
     }
 
-    // Update password by email
     public function updatePassword($email, $newPassword)
     {
         $hashed = password_hash($newPassword, PASSWORD_DEFAULT);
