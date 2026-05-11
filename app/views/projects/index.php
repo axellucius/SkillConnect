@@ -40,8 +40,7 @@
             <?php foreach ($data['projects'] as $project): ?>
 
                 <!-- CARD PROJECT START -->
-                <div class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col justify-between"
-                    data-id="<?= $project['id']; ?>">
+                <a href="/projects/detail/<?= $project['id']; ?>" class="bg-white rounded-xl border border-gray-100 shadow-sm p-4 flex flex-col justify-between hover:translate-y-[4px] hover:shadow-md transition-all" data-id="<?= $project['id']; ?>">
                     <div>
                         <div class="w-12 h-12 bg-gray-900 rounded-full flex items-center justify-center mb-3 overflow-hidden">
                             <img src="/assets/uploads/projects/<?= $project['icon']; ?>" class="w-full h-full object-cover" onerror="this.src='/assets/images/default-project.jpg'">
@@ -97,7 +96,7 @@
                             ?>
                         </div>
                     </div>
-                </div>
+                </a>
                 <!-- CARD PROJECT END -->
 
             <?php endforeach; ?>
