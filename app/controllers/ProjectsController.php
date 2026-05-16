@@ -3,6 +3,7 @@ namespace App\Controllers;
 
 use App\Core\Controller;
 use App\Models\Project;
+use App\Models\User;
 
 class ProjectsController extends Controller
 {
@@ -21,6 +22,24 @@ class ProjectsController extends Controller
         $this->view('projects/index', $data);
     }
 
+    public function create()
+    {
+        $userModel = new User();
+        $projectModel = new Project(); 
+        
+        $categories = $projectModel->getAllCategories(); 
+        $users = $userModel->getAll();
+
+        $data = [
+            'title' => 'Create New Project',
+            'active_page' => 'projects',
+            'categories' => $categories,
+            'users' => $users
+        ];
+    
+        $this->view('projects/create', $data);
+    }
+
     public function store() 
     {
         if (!isset($_SESSION['user_id'])) {
@@ -31,15 +50,16 @@ class ProjectsController extends Controller
         $name = $_POST['name'];
         $description = $_POST['description'];
         $team_name = $_POST['team_name'];
+        $category_id = $_POST['category_id'];
         $owner_id = $_SESSION['user_id'];
 
         $iconName = 'default-project.png';
 
         if (isset($_FILES['icon']) && $_FILES['icon']['error'] == 0) {
             $extension = pathinfo($_FILES['icon']['name'], PATHINFO_EXTENSION);
-            $newFileName = "project_" . time() . "." . $extension;
+            $newFileName = "project_" . time() . "_" . uniqid() . "." . $extension;
             
-            $destination = "/assets/uploads/projects/" . $newFileName;
+            $destination = "../public/assets/uploads/projects/" . $newFileName;
 
             if (move_uploaded_file($_FILES['icon']['tmp_name'], $destination)) {
                 $iconName = $newFileName;
@@ -47,15 +67,27 @@ class ProjectsController extends Controller
         }
 
         $projectModel = new Project(); 
-        $success = $projectModel->create([
+        
+        $projectId = $projectModel->create([
             'name' => $name,
             'description' => $description,
             'team_name' => $team_name,
             'icon' => $iconName,
+            'category_id' => $category_id,
             'owner_id' => $owner_id
         ]);
 
-        if ($success) {
+        if ($projectId) {
+
+            $projectModel->addMember($projectId, $owner_id, 'Owner');
+
+            if (isset($_POST['member_ids']) && is_array($_POST['member_ids'])) {
+                foreach ($_POST['member_ids'] as $m_id) {
+                    if ($m_id == $owner_id) continue;
+                    $projectModel->addMember($projectId, $m_id, 'Member');
+                }
+            }
+
             header('Location: /projects');
             exit;
         } else {
@@ -63,13 +95,4 @@ class ProjectsController extends Controller
         }
     }
 
-    public function create()
-    {
-        $data = [
-            'title' => 'Create New Project',
-            'active_page' => 'projects'
-        ];
-    
-        $this->view('projects/create', $data);
-    }
 }

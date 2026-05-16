@@ -5,7 +5,6 @@ use App\Core\Database;
 
 class User extends Database
 {
-
     public function findByEmail($email)
     {
         $stmt = $this->db->prepare("SELECT * FROM users WHERE email = ?");
@@ -30,6 +29,20 @@ class User extends Database
         $stmt = $this->db->prepare("UPDATE users SET password = ? WHERE email = ?");
         $stmt->bind_param("ss", $hashed, $email);
         return $stmt->execute();
+    }
+
+    public function getAll()
+    {
+        $current_user = $_SESSION['user_id'] ?? 0;
+        
+        $query = "SELECT id, name FROM users WHERE id != ? ORDER BY name ASC";
+        
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param("i", $current_user);
+        $stmt->execute();
+        
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 }
 ?>
