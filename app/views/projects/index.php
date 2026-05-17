@@ -45,7 +45,7 @@
                             <img src="/assets/uploads/projects/<?= $project['icon']; ?>" class="w-full h-full object-cover" onerror="this.src='/assets/images/default-project.jpg'">
                         </div>
 
-                        <h2 class="font-bold text-[#333333] text-xl mb-3"><?= $project['name']; ?></h2>
+                        <h2 class="font-medium text-[#333333] text-xl mb-3"><?= $project['name']; ?></h2>
 
                         <div class="flex flex-col gap-2 text-xs text-gray-500 pb-3 border-b border-[#d9d9d9]">
                             <div class="flex items-center gap-2">

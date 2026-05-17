@@ -4,7 +4,7 @@
         <p class="text-sm">Start a new project and collaborate with others</p>
     </article>
 
-    <form action="/projects/store" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4 mx-12 my-4">
+    <form action="/projects/store" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4 mx-12 mt-4 mb-8">
         <div class="flex items-center gap-2">
             <img src="/assets/images/default-project.jpg" alt="Default Project Image" class="h-40 w-40 rounded-full object-cover border-2 border-gray-100">
             <div class="flex gap-2 ml-4">

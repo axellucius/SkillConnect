@@ -36,12 +36,7 @@ class Project extends Database
 
     public function getAllProjects()
     {
-        $query = "SELECT 
-                    p.*, 
-                    u.name as owner_name, 
-                    c.name as category_name,
-                    (SELECT COUNT(*) FROM project_members pm WHERE pm.project_id = p.id) as total_members, 
-                    (SELECT GROUP_CONCAT(users.avatar) FROM project_members pm JOIN users ON pm.user_id = users.id WHERE pm.project_id = p.id) as member_avatars FROM projects p JOIN users u ON p.owner_id = u.id LEFT JOIN categories c ON p.category_id = c.id ORDER BY p.created_at DESC";
+        $query = "SELECT p.*, u.name as owner_name, c.name as category_name, (SELECT COUNT(*) FROM project_members pm WHERE pm.project_id = p.id) as total_members, (SELECT GROUP_CONCAT(users.avatar) FROM project_members pm JOIN users ON pm.user_id = users.id WHERE pm.project_id = p.id) as member_avatars FROM projects p JOIN users u ON p.owner_id = u.id LEFT JOIN categories c ON p.category_id = c.id ORDER BY p.created_at DESC";
 
         $result = $this->db->query($query);
         return $result->fetch_all(MYSQLI_ASSOC);
@@ -60,22 +55,20 @@ class Project extends Database
         $query = "INSERT INTO project_members (project_id, user_id, role) VALUES (?, ?, ?)";
 
         $stmt = $this->db->prepare($query);
-
         $stmt->bind_param("iis", $projectId, $userId, $role);
-        
         return $stmt->execute();
     }
 
     public function getProjectById($id)
     {
-        $query = "SELECT projects.*, categories.name AS category_name FROM projects LEFT JOIN categories ON projects.category_id = categories.id WHERE projects.id = ?";
+        $query = "SELECT projects.*, categories.name AS category_name, users.name AS owner_name, (SELECT COUNT(*) FROM project_members WHERE project_members.project_id = projects.id) AS member_count FROM projects LEFT JOIN categories ON projects.category_id = categories.id LEFT JOIN users ON projects.owner_id = users.id WHERE projects.id = ?";
 
         $stmt = $this->db->prepare($query);
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt->get_result();
     
-        return $result->fetch_assoc(); // Mengembalikan 1 baris data project
+        return $result->fetch_assoc();
     }
 
     public function getProjectMembers($id)
@@ -93,6 +86,6 @@ class Project extends Database
             $members[] = $row;
         }
 
-        return $members; // Mengembalikan banyak baris data member
+        return $members; 
     }
 }
