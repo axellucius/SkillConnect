@@ -65,4 +65,34 @@ class Project extends Database
         
         return $stmt->execute();
     }
+
+    public function getProjectById($id)
+    {
+        $query = "SELECT projects.*, categories.name AS category_name FROM projects LEFT JOIN categories ON projects.category_id = categories.id WHERE projects.id = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        return $result->fetch_assoc(); // Mengembalikan 1 baris data project
+    }
+
+    public function getProjectMembers($id)
+    {
+        $query = "SELECT users.id, users.name, project_members.role FROM project_members JOIN users ON project_members.user_id = users.id WHERE project_members.project_id = ?";
+
+        $stmt = $this->db->prepare($query);
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+    
+        $members = [];
+
+        while ($row = $result->fetch_assoc()) {
+            $members[] = $row;
+        }
+
+        return $members; // Mengembalikan banyak baris data member
+    }
 }

@@ -95,4 +95,31 @@ class ProjectsController extends Controller
         }
     }
 
+    public function detail($id) 
+{
+    if (!isset($_SESSION['user_id'])) {
+        header('Location: /login');
+        exit;
+    }
+
+    $projectModel = new Project();
+
+    $project = $projectModel->getProjectById($id);
+
+    if (!$project) {
+        header('Location: /projects'); 
+        exit;
+    }
+
+    $members = $projectModel->getProjectMembers($id);
+
+    $data = [
+        'title' => 'Project Detail - ' . $project['name'],
+        'active_page' => 'projects',
+        'project' => $project,
+        'members' => $members
+    ];
+
+    $this->view('projects/detail', $data);
+}
 }

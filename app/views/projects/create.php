@@ -6,8 +6,7 @@
 
     <form action="/projects/store" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4 mx-12 my-4">
         <div class="flex items-center gap-2">
-            <img src="/assets/images/default-project.jpg" alt="Default Project Image"
-                class="h-40 w-40 rounded-full object-cover border-2 border-gray-100">
+            <img src="/assets/images/default-project.jpg" alt="Default Project Image" class="h-40 w-40 rounded-full object-cover border-2 border-gray-100">
             <div class="flex gap-2 ml-4">
                 <label
                     class="font-semibold bg-[#2A2F5A] text-white py-3 px-5 rounded-lg hover:-translate-y-0.5 hover:bg-[#454b85] hover:shadow-md transition-all cursor-pointer">
