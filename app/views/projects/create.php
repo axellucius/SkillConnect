@@ -65,7 +65,7 @@
             <p class="text-sm font-semibold">Members</p>
             <div class="relative mt-1">
                 <select name="member_ids[]"
-                    class="w-full p-3 pr-10 border border-[#8f8f8f] rounded-md text-[#333333] outline-none focus:border-[#2A2F5A] focus:ring-1 focus:ring-[#2A2F5A] bg-white cursor-pointer appearance-none">
+                    class="w-full p-3 pr-10 bg-[#e8eff7] border border-[#8f8f8f] rounded-md text-[#333333] outline-none focus:border-[#2A2F5A] focus:ring-1 focus:ring-[#2A2F5A] cursor-pointer appearance-none">
                     <option value="" disabled selected>Choose users to join your team...</option>
                     <?php if (!empty($data['users'])): ?>
                         <?php foreach ($data['users'] as $user): ?>

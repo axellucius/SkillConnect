@@ -38,6 +38,8 @@ $router->add("GET", "/", "HomeController", "index");
 $router->add("GET", "/projects", "ProjectsController", "index");
 $router->add("GET", "/projects/create", "ProjectsController", "create");
 
+$router->add("POST", "/projects/store", "ProjectsController", "store");
+
 $router->add("GET", "/profile",     "AuthController", "profile");
 $router->add("GET", "/skills",      "AuthController", "skills");
 $router->add("GET", "/list-skills", "AuthController", "listSkills");
