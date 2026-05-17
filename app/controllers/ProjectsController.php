@@ -114,7 +114,7 @@ class ProjectsController extends Controller
     $members = $projectModel->getProjectMembers($id);
 
     $data = [
-        'title' => 'Project Detail - ' . $project['name'],
+        'title' => 'Project - ' . $project['name'],
         'active_page' => 'projects',
         'project' => $project,
         'members' => $members
