@@ -49,12 +49,17 @@
     </article>
 
     <article class="mx-12 mb-4 pb-4 border-b border-[#8f8f8f]">
-        <h1 class="text-xl font-bold">Categories</h1>
-        <p></p>
+        <h1 class="text-xl font-bold pb-1">Categories</h1>
+        <p class="text-white bg-[#2A2F5A] py-1 px-3 rounded-sm inline-block"><?= htmlspecialchars($data['project']['category_name'] ?? 'Uncategorized') ?></p>
     </article>
 
-    <div class="flex justify-end gap-2 mx-12">
+    <article class="mx-12 mb-4 pb-4 border-b border-[#8f8f8f]">
+        <h1 class="text-xl font-bold pb-1">Members</h1>
+        <p class="text-white bg-[#2A2F5A] py-1 px-3 rounded-sm inline-block"><?= htmlspecialchars($data['project']['member_name'] ?? 'No members') ?></p>
+    </article>
+
+    <article class="flex justify-end gap-2 mx-12 mb-8">
         <a href="/projects" class="font-semibold bg-[#E8EFF7] text-[#333333] py-3 px-5 rounded-lg hover:-translate-y-0.5 hover:bg-[#cde1f7] hover:shadow-md transition-all text-center">Back</a>
         <a type="submit" class="font-semibold bg-[#2A2F5A] text-white py-3 px-5 rounded-lg hover:-translate-y-0.5 hover:bg-[#454b85] hover:shadow-md transition-all">Edit Project</a>
-    </div>
+    </article>
 </section>

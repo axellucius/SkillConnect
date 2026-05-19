@@ -35,7 +35,7 @@ class User extends Database
     {
         $current_user = $_SESSION['user_id'] ?? 0;
         
-        $query = "SELECT id, name FROM users WHERE id != ? ORDER BY name ASC";
+        $query = "SELECT id, name, class FROM users WHERE id != ? ORDER BY name ASC";
         
         $stmt = $this->db->prepare($query);
         $stmt->bind_param("i", $current_user);
