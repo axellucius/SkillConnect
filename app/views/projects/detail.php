@@ -5,22 +5,25 @@
     </article>
 
     <article class="mx-12 my-4 flex items-center gap-5 border-b border-[#8f8f8f] pb-4">
-        <?php 
-            $projectIcon = (!empty($data['project']['icon'])) ? $data['project']['icon'] : 'default-project.jpg';
+        <?php
+        $projectIcon = (!empty($data['project']['icon'])) ? $data['project']['icon'] : 'default-project.jpg';
 
-            $dateString = $data['project']['created_at'];
-            $date = new DateTime($dateString);
-            $formattedDate = $date->format('M j, Y');
+        $dateString = $data['project']['created_at'];
+        $date = new DateTime($dateString);
+        $formattedDate = $date->format('M j, Y');
         ?>
 
-        <img src="/assets/uploads/projects/<?= htmlspecialchars($projectIcon) ?>" alt="<?= htmlspecialchars($data['project']['name']) ?>" class="h-36 w-36 rounded-full object-cover border border-gray-200 shadow-sm">
+        <img src="/assets/uploads/projects/<?= htmlspecialchars($projectIcon) ?>"
+            alt="<?= htmlspecialchars($data['project']['name']) ?>"
+            class="h-36 w-36 rounded-full object-cover border border-gray-200 shadow-sm">
 
         <div class="flex flex-col gap-5">
             <div>
                 <h1 class="font-bold text-2xl"><?= htmlspecialchars($data['project']['name']) ?></h1>
                 <div class="flex gap-1 text-[#8f8f8f] text-lg">
-                    by 
-                    <p class="text-[#ef6c00] font-semibold"><?= htmlspecialchars($data['project']['team_name']) ?> Team</p> 
+                    by
+                    <p class="text-[#ef6c00] font-semibold"><?= htmlspecialchars($data['project']['team_name']) ?> Team
+                    </p>
                 </div>
             </div>
 
@@ -37,7 +40,8 @@
 
                 <div>
                     <p class="text-[#8f8f8f]">Members Active</p>
-                    <p class="text-[#ef6c00] font-semibold"><?= htmlspecialchars($data['project']['member_count']) ?></p>
+                    <p class="text-[#ef6c00] font-semibold"><?= htmlspecialchars($data['project']['member_count']) ?>
+                    </p>
                 </div>
             </div>
         </div>
@@ -50,16 +54,40 @@
 
     <article class="mx-12 mb-4 pb-4 border-b border-[#8f8f8f]">
         <h1 class="text-xl font-bold pb-1">Categories</h1>
-        <p class="text-white bg-[#2A2F5A] py-1 px-3 rounded-sm inline-block"><?= htmlspecialchars($data['project']['category_name'] ?? 'Uncategorized') ?></p>
+        <p class="text-white bg-[#2A2F5A] py-1 px-3 rounded-sm inline-block">
+            <?= htmlspecialchars($data['project']['category_name'] ?? 'Uncategorized') ?></p>
     </article>
 
     <article class="mx-12 mb-4 pb-4 border-b border-[#8f8f8f]">
         <h1 class="text-xl font-bold pb-1">Members</h1>
-        <p class="text-white bg-[#2A2F5A] py-1 px-3 rounded-sm inline-block"><?= htmlspecialchars($data['project']['member_name'] ?? 'No members') ?></p>
+        <div class="flex flex-wrap gap-3">
+            <?php if (!empty($data['members'])): ?>
+                <?php foreach ($data['members'] as $member): ?>
+                    <div class="flex items-center gap-2 bg-[#2A2F5A] text-white pl-1.5 pr-4 py-1.5 rounded-md text-sm shadow-sm">
+                        <div class="h-6 w-6 rounded-full bg-[#ef6c00] flex items-center justify-center text-[11px] font-bold shadow-inner">
+                            <?= strtoupper(substr(htmlspecialchars($member['name']), 0, 1)); ?>
+                        </div>
+
+                        <span class="font-medium"><?= htmlspecialchars($member['name']) ?></span>
+
+                        <?php if ($member['role'] === 'Owner'): ?>
+                            <span class="text-[9px] bg-[#ef6c00] text-white px-1 rounded font-bold uppercase tracking-tight">Host</span>
+                        <?php endif; ?>
+                    </div>
+
+                <?php endforeach; ?>
+                
+            <?php else: ?>
+                <p class="text-sm text-gray-400 italic">No members active</p>
+            <?php endif; ?>
+        </div>
     </article>
 
     <article class="flex justify-end gap-2 mx-12 mb-8">
-        <a href="/projects" class="font-semibold bg-[#E8EFF7] text-[#333333] py-3 px-5 rounded-lg hover:-translate-y-0.5 hover:bg-[#cde1f7] hover:shadow-md transition-all text-center">Back</a>
-        <a type="submit" class="font-semibold bg-[#2A2F5A] text-white py-3 px-5 rounded-lg hover:-translate-y-0.5 hover:bg-[#454b85] hover:shadow-md transition-all">Edit Project</a>
+        <a href="/projects"
+            class="font-semibold bg-[#E8EFF7] text-[#333333] py-3 px-5 rounded-lg hover:-translate-y-0.5 hover:bg-[#cde1f7] hover:shadow-md transition-all text-center">Back</a>
+        <a type="submit"
+            class="font-semibold bg-[#2A2F5A] text-white py-3 px-5 rounded-lg hover:-translate-y-0.5 hover:bg-[#454b85] hover:shadow-md transition-all">Edit
+            Project</a>
     </article>
 </section>

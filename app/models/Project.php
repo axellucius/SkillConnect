@@ -73,7 +73,7 @@ class Project extends Database
 
     public function getProjectMembers($id)
     {
-        $query = "SELECT users.id, users.name, project_members.role FROM project_members JOIN users ON project_members.user_id = users.id WHERE project_members.project_id = ?";
+        $query = "SELECT users.id, users.name, project_members.role FROM project_members JOIN users ON project_members.user_id = users.id WHERE project_members.project_id = ? ORDER BY FIELD(project_members.role, 'Owner', 'Member') ASC, users.name ASC";
 
         $stmt = $this->db->prepare($query);
         $stmt->bind_param("i", $id);
