@@ -4,11 +4,12 @@
         <p class="text-sm">Start a new project and collaborate with others</p>
     </article>
 
-    <form action="/projects/store" method="POST" enctype="multipart/form-data" class="flex flex-col gap-4 mx-12 mt-4 mb-8">
+    <form action="/projects/store" method="POST" enctype="multipart/form-data"
+        class="flex flex-col gap-4 mx-12 mt-4 mb-8">
         <div class="flex items-center gap-2">
-            <img src="/assets/images/default-project.jpg" alt="Default Project Image" class="h-40 w-40 rounded-full object-cover border-2 border-gray-100">
+            <img type="file"  src="/assets/images/default-project.jpg" alt="Default Project Image" class="h-40 w-40 rounded-full object-cover border-2 border-gray-100">
             <div class="flex gap-2 ml-4">
-                <label
+                <label  
                     class="font-semibold bg-[#2A2F5A] text-white py-3 px-5 rounded-lg hover:-translate-y-0.5 hover:bg-[#454b85] hover:shadow-md transition-all cursor-pointer">
                     Add Image
                     <input type="file" name="icon" class="hidden" accept="image/*">
@@ -63,23 +64,23 @@
         <div class="w-full">
             <p class="text-sm font-semibold">Members</p>
             <div class="relative mt-1">
-                <select name="member_ids[]"
-                    class="w-full p-3 pr-10 bg-[#e8eff7] border border-[#8f8f8f] rounded-md text-[#333333] outline-none focus:border-[#2A2F5A] focus:ring-1 focus:ring-[#2A2F5A] cursor-pointer appearance-none">
-                    <option value="" disabled selected>Choose users to join your team...</option>
+                <select name="member_ids[]" multiple size="3"
+                    class="w-full p-3 bg-[#e8eff7] border border-[#8f8f8f] rounded-md text-[#333333] outline-none focus:border-[#2A2F5A] focus:ring-1 focus:ring-[#2A2F5A] cursor-pointer">
+
                     <?php if (!empty($data['users'])): ?>
                         <?php foreach ($data['users'] as $user): ?>
-                            <option value="<?= $user['id']; ?>">
-                                <?= $user['name']; ?>
+                            <option value="<?= $user['id']; ?>" class="p-2 border-b border-gray-100 hover:bg-gray-100">
+                                <?= htmlspecialchars($user['name']); ?>
+                                <?= isset($user['class']) ? '(' . htmlspecialchars($user['class']) . ')' : '' ?>
                             </option>
                         <?php endforeach; ?>
+                    <?php else: ?>
+                        <option disabled>No users available...</option>
                     <?php endif; ?>
                 </select>
-                <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3 text-gray-500">
-                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </div>
             </div>
+            <p class="text-[11px] text-gray-400 mt-1">*Tahan tombol <kbd class="bg-gray-200 px-1 rounded font-bold">Ctrl</kbd>
+            </p>
         </div>
 
         <div class="flex justify-end mt-2 gap-2">

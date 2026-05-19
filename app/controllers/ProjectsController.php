@@ -53,7 +53,7 @@ class ProjectsController extends Controller
         $category_id = $_POST['category_id'];
         $owner_id = $_SESSION['user_id'];
 
-        $iconName = 'default-project.png';
+        $iconName = 'default-project.jpg';
 
         if (isset($_FILES['icon']) && $_FILES['icon']['error'] == 0) {
             $extension = pathinfo($_FILES['icon']['name'], PATHINFO_EXTENSION);
@@ -81,8 +81,8 @@ class ProjectsController extends Controller
 
             $projectModel->addMember($projectId, $owner_id, 'Owner');
 
-            if (isset($_POST['member_id']) && is_array($_POST['member_id'])) {
-                foreach ($_POST['member_id'] as $m_id) {
+            if (isset($_POST['member_ids']) && is_array($_POST['members_ids'])) {
+                foreach ($_POST['member_ids'] as $m_id) {
                     if ($m_id == $owner_id)
                         continue;
                     $projectModel->addMember($projectId, $m_id, 'Member');

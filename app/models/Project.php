@@ -18,6 +18,7 @@ class Project extends Database
         $query = "INSERT INTO projects (name, description, team_name, icon, owner_id, category_id) VALUES (?, ?, ?, ?, ?, ?)";
 
         $stmt = $this->db->prepare($query);
+        
         $stmt->bind_param(
             "ssssii", 
             $data['name'], 
