@@ -59,7 +59,18 @@
     <a href="#"
         class="mt-auto p-2 rounded-lg flex items-center gap-2.5 hover:bg-[#1a1f3a] hover:text-[#202853] transition-colors">
         <div class="w-9 h-9 flex items-center justify-center">
-            <img src="/assets/images/photo-profile.jpg" alt="Photo Profile" class="rounded-full">
+            <?php 
+            
+            $current_user_name = $_SESSION['user_name'] ?? 'Guest';
+            $initial_sidebar = strtoupper(substr(trim($current_user_name), 0, 1));
+
+            if (!empty($_SESSION['user_avatar'])): ?>
+                <img src="/assets/uploads/avatars/<?= htmlspecialchars($_SESSION['user_avatar']) ?>" alt="Photo Profile" class="w-full h-full rounded-full object-cover">
+            <?php else: ?>
+                <div class="w-full h-full rounded-full bg-[#ef6c32] text-white flex items-center justify-center text-sm font-bold shadow-sm">
+                    <?= $initial_sidebar ?>
+                </div>
+            <?php endif; ?>
         </div>
 
         <div class="flex flex-col gap-1">
