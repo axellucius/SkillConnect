@@ -81,7 +81,7 @@ class ProjectsController extends Controller
 
             $projectModel->addMember($projectId, $owner_id, 'Owner');
 
-            if (isset($_POST['member_ids']) && is_array($_POST['members_ids'])) {
+            if (isset($_POST['member_ids']) && is_array($_POST['member_ids'])) {
                 foreach ($_POST['member_ids'] as $m_id) {
                     if ($m_id == $owner_id)
                         continue;
@@ -114,11 +114,14 @@ class ProjectsController extends Controller
 
         $members = $projectModel->getProjectMembers($id);
 
+        $categories = $projectModel->getAllCategories();
+
         $data = [
             'title' => 'Project - ' . $project['name'],
             'active_page' => 'projects',
             'project' => $project,
-            'members' => $members
+            'members' => $members,
+            'categories' => $categories
         ];
 
         $this->view('projects/detail', $data);
