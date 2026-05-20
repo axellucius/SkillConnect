@@ -18,19 +18,19 @@ class Project extends Database
         $query = "INSERT INTO projects (name, description, team_name, icon, owner_id, category_id) VALUES (?, ?, ?, ?, ?, ?)";
 
         $stmt = $this->db->prepare($query);
-        
+
         $stmt->bind_param(
-            "ssssii", 
-            $data['name'], 
-            $data['description'], 
-            $data['team_name'], 
-            $data['icon'], 
+            "ssssii",
+            $data['name'],
+            $data['description'],
+            $data['team_name'],
+            $data['icon'],
             $data['owner_id'],
             $data['category_id']
         );
-        
+
         if ($stmt->execute()) {
-            return $this->db->insert_id; 
+            return $this->db->insert_id;
         }
         return false;
     }
@@ -68,7 +68,7 @@ class Project extends Database
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt->get_result();
-    
+
         return $result->fetch_assoc();
     }
 
@@ -80,13 +80,26 @@ class Project extends Database
         $stmt->bind_param("i", $id);
         $stmt->execute();
         $result = $stmt->get_result();
-    
+
         $members = [];
 
         while ($row = $result->fetch_assoc()) {
             $members[] = $row;
         }
 
-        return $members; 
+        return $members;
+    }
+
+    public function bulkDelete($ids)
+    {
+        // Mengamankan ID menjadi tipe integer untuk mencegah SQL Injection
+        $cleanIds = array_map('intval', $ids);
+        $idList = implode(',', $cleanIds);
+
+        // Sesuaikan kueri ini dengan arsitektur database/PDO yang Anda gunakan di Core Model
+        // Contoh jika menggunakan PDO Native:
+        $sql = "DELETE FROM projects WHERE id IN ($idList)";
+        $stmt = $this->db->prepare($sql);
+        return $stmt->execute();
     }
 }

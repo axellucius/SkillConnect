@@ -126,4 +126,27 @@ class ProjectsController extends Controller
 
         $this->view('projects/detail', $data);
     }
+
+    public function delete()
+    {
+        // 1. Pastikan user sudah login terlebih dahulu
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: /login');
+            exit;
+        }
+
+        // 2. Cek apakah ada data ID yang dikirim lewat metode POST
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['project_ids'])) {
+            $projectIds = $_POST['project_ids'];
+
+            if (is_array($projectIds) && !empty($projectIds)) {
+                $projectModel = new Project();
+
+                $projectModel->bulkDelete($projectIds);
+            }
+        }
+
+        header('Location: /projects');
+        exit;
+    }
 }

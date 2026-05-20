@@ -38,6 +38,7 @@ $router->add("GET", "/", "HomeController", "index");
 $router->add("GET", "/projects", "ProjectsController", "index");
 $router->add("GET", "/projects/create", "ProjectsController", "create");
 $router->add("POST", "/projects/store", "ProjectsController", "store");
+$router->add("POST", "/projects/delete", "ProjectsController", "delete");
 
 $router->add("GET", "/projects/detail/{id}", "ProjectsController", "detail");
 
